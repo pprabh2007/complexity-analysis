@@ -1,0 +1,10 @@
+#define PUNCTUATOR 1
+
+#define SINGLE_LINE_COMMENT 2
+#define MULTI_LINE_COMMENT 3
+
+#define KEYWORD 4
+#define IDENTIFIER 5
+
+#define STRING_LITERAL 6
+#define CONSTANT 7

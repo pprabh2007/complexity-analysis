@@ -1,4 +1,5 @@
 int main()
 {
-	for(; ; );
+	int N = 10;
+	int i;
 }

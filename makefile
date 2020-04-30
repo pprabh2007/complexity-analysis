@@ -1,27 +1,14 @@
-a.out: lex.yy.o y.tab.o assgn4_17CS10035_main.o
-	gcc lex.yy.o y.tab.o assgn4_17CS10035_main.o -lfl
+a.out:	lex.yy.c
+	gcc assgn3_17CS10035.c lex.yy.c
 
-assgn4_17CS10035_main.o: assgn4_17CS10035_main.c
-	gcc -c assgn4_17CS10035_main.c
+lex.yy.c:	assgn3_17CS10035.l
+	lex assgn3_17CS10035.l
 
-lex.yy.o: lex.yy.c
-	gcc -c lex.yy.c
+clean:			
+	rm lex.yy.c a.out
 
-y.tab.o: y.tab.c
-	gcc -c y.tab.c
+test_default:			
+	./a.out < assgn3_17CS10035_test.c
 
-lex.yy.c: assgn4_17CS10035.l y.tab.h
-	flex assgn4_17CS10035.l
-
-y.tab.c: assgn4_17CS10035.y
-	yacc -dtv assgn4_17CS10035.y -W
-
-y.tab.h: assgn4_17CS10035.y
-	yacc -dtv assgn4_17CS10035.y -W
-
-clean:
-	rm lex.yy.c y.tab.c y.tab.h lex.yy.o y.tab.o assgn4_17CS10035_main.o y.output a.out
-
-test: 
-	./a.out < test.c
-
+test_other:
+	./a.out
