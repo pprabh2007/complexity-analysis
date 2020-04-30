@@ -1,7 +1,7 @@
 int main()
 {
 	int i;
-	int N, M
+	int N, M;
 	for(i=100; i>=M; i++)
 	{
 		printf("hello");
