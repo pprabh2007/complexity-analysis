@@ -1,13 +1,11 @@
 int main()
 {
 	int i;
-	int N, M;
-	for(i=100; i>=M; i++)
+
+	if(i=0)
 	{
 		printf("hello");
-		for(j=1; j<N; j++)
-		{
-			;
-		}
 	}
+
+	int m;
 }
