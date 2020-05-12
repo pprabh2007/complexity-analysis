@@ -40,11 +40,10 @@ def makeGraph(prev_head):
 		if(token==';'):
 			change_node = True
 		elif(token=='{'):
-			new_head = makeGraph(new_head)
-			change_node = True
+			makeGraph(new_head)
 		elif(token=='}'):
 			change_node = False
-			return new_head
+			break
 		elif(change_node):
 			temp = Node()
 			new_head.children.append(temp)

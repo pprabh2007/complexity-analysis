@@ -1,11 +1,17 @@
 int main()
 {
 	int i;
-
-	if(i=0)
+	int j;
+	if(i==0)
 	{
-		printf("hello");
+		j = 0;
 	}
-
-	int m;
+	else if(i==1)
+	{
+		j = 1;
+	}
+	else 
+	{
+		j = -1;
+	}
 }
